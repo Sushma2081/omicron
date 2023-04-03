@@ -1,0 +1,40 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+h4{
+  text-align:justify;
+}
+
+::ng-deep .ngb-dp-day {
+    font-size: 15px; /* increase the font size */
+  }
+  
+  ::ng-deep .ngb-datepicker .ngb-dp-day.selected {
+    background-color: blue !important; /* change the color of the selected date */
+    color: black !important; /* change the text color of the selected date */
+  }
+  
+
+  .custom-datepicker {
+    font-family: Arial, sans-serif; /* change the font family */
+    border: 1px solid #ccc; /* add a border */
+    padding: 10px; /* add some padding */
+  }
+  .custom-datepicker .ngb-dp-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  ::ng-deep .ngb-dp-arrow {
+    color: red !important;
+  }
+  .custom-datepicker .ngb-dp-header button {
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+    

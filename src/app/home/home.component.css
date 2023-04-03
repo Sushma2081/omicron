@@ -1,0 +1,19 @@
+.image-text-container {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:oldlace;
+    padding: 2rem;
+    background-image: url("https://img.freepik.com/free-photo/nobody-waiting-room-with-front-desk-reception-wall-screen-tv-with-promotional-offer-private-practice-hopital-waiting-area-patients-with-doctor-appointments-modern-healthcare-clinic_482257-46743.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    width: 1200px;
+  }
+  

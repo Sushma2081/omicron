@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5>Doctor View</h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary" (click)="showTimeslots('Sunday')">Sunday</button>
+                <button type="button" class="btn btn-primary" (click)="showTimeslots('Monday')">Monday</button>
+                <button type="button" class="btn btn-primary" (click)="showTimeslots('Tuesday')">Tuesday</button>
+                <button type="button" class="btn btn-primary" (click)="showTimeslots('Wednesday')">Wednesday</button>
+                <button type="button" class="btn btn-primary" (click)="showTimeslots('Thursday')">Thursday</button>
+                <button type="button" class="btn btn-primary" (click)="showTimeslots('Friday')">Friday</button>
+                <button type="button" class="btn btn-primary" (click)="showTimeslots('Saturday')">Saturday</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <table class="table">
+              <thead>
+                <tr>
+                  
+                  <th>Available TimeSlots on {{day1}}</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let a of ts_day">
+                  <td>{{a}}</td>
+                  <!-- <td><button (click)="deleteTimeslot(a)">Delete</button></td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-12 mt-2">
+              <h4>Add a new timeslot</h4>
+              <form (ngSubmit)="onSubmit()">
+                <div class="form-group">  
+                  <label for="dayofweek">day of week:</label>
+                  <input type="number" class="form-control" id="dayofweek" [(ngModel)]="doctor1.dayofweek" name="dayofweek">
+                </div>
+                <div class="form-group">
+                  
+                  <label for="fromtime">From time:</label>
+                  <input type="time" class="form-control" id="fromtime" [(ngModel)]="fromtime" name="fromtime">
+                </div>
+                <div class="form-group">
+                  <label for="totime">To time:</label>
+                  <input type="time" class="form-control" id="totime" [(ngModel)]="totime" name="totime">
+                </div>
+                <button type="submit" class="btn btn-primary">Add timeslot</button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <p>{{addt}}</p>
+          </div>
+          <div class="row">
+            <h4>TimeSlots</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <!-- <th>Timeslot id</th> -->
+                  <th>Day of the week</th>
+                  <th>Start time</th>
+                  <th>End time</th>
+                  <!-- <th>status</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let t of timeSlots">
+                  <!-- <td> {{t.timeslotid}}</td> -->
+                  <td>{{t.dayofweek}}</td>
+                  <td>{{t.starttime}}</td>
+                  <td>{{t.endtime}}</td>
+                  <td><button class="btn btn-danger"(click)="deleteTimeslot(t.timeslotid)">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

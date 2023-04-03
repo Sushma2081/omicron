@@ -1,0 +1,28 @@
+<div class="center">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+        <!-- <h2>Book your Slot</h2> -->
+        <br><br>
+        <ngb-datepicker [(ngModel)]="date" (dateSelect)="onDateSelect($event)" class="custom-datepicker" ></ngb-datepicker>
+        <ng-template #header>
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-link" (click)="navigateMonth(-1)">Previous</button>
+              <button type="button" class="btn btn-link" (click)="navigateMonth(1)">Next</button>
+            </div>
+          </ng-template>
+        
+    </div>
+    <br><br>
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <br>
+            <h4 class="justify-content-center">Available time slots:</h4>
+            <ul>
+                <li *ngFor="let timeSlot of appointmentsondate" (click)="onTimeSlotSelect(timeSlot)" style="cursor:pointer">{{timeSlot}}</li>
+            </ul>
+            <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+        </div>
+    </div>
+</div>
+</div>
